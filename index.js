@@ -13,11 +13,13 @@ const tutorials = [
 
 const titleCased = () => 
 {
-  return tutorials.map(function(sentence)
-  {
+  return tutorials.map(wordCapitalizer);
+}
+
+function wordCapitalizer(sentence)
+{
     let wordArray = sentence.split(' ');
     let modifiedArray = wordArray.map(word => word.charAt(0).toUpperCase() + word.slice(1));
-    
+
     return modifiedArray.join(' ');
-  });
 }
